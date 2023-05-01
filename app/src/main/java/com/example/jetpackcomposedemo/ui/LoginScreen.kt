@@ -346,7 +346,7 @@ fun HeaderView() {
     ) {
         Image(
             modifier = Modifier.wrapContentWidth(),
-            bitmap = ImageBitmap.imageResource(id = R.drawable.flower_logo),
+            bitmap = ImageBitmap.imageResource(id = R.drawable.pizza_logo),
             contentDescription = "header_view_flower_logo"
         )
         Text(

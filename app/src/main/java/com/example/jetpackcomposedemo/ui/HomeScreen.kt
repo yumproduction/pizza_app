@@ -14,6 +14,7 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.layout.ContentScale
@@ -84,14 +85,41 @@ private fun SlidingBanner() {
         state = pagerState,
         itemSpacing = 20.dp,
     ) { page ->
-        Image(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(20.dp),
-            bitmap = ImageBitmap.imageResource(id = R.drawable.ic_sale_banner),
-            contentScale = ContentScale.FillWidth,
-            contentDescription = "sliding_banner_image"
-        )
+        when (page) {
+            0 -> {
+                Image(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(20.dp)
+                        .clip(RoundedCornerShape(20.dp)),
+                    bitmap = ImageBitmap.imageResource(id = R.drawable.ic_sale_banner),
+                    contentScale = ContentScale.FillWidth,
+                    contentDescription = "sliding_banner_image"
+                )
+            }
+            1 -> {
+                Image(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(20.dp)
+                        .clip(RoundedCornerShape(20.dp)),
+                    bitmap = ImageBitmap.imageResource(id = R.drawable.ic_sale_banner_1),
+                    contentScale = ContentScale.FillWidth,
+                    contentDescription = "sliding_banner_image"
+                )
+            }
+            2 -> {
+                Image(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(20.dp)
+                        .clip(RoundedCornerShape(20.dp)),
+                    bitmap = ImageBitmap.imageResource(id = R.drawable.ic_sale_banner_2),
+                    contentScale = ContentScale.FillWidth,
+                    contentDescription = "sliding_banner_image"
+                )
+            }
+        }
     }
 
     HorizontalPagerIndicator(

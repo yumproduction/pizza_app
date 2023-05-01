@@ -167,6 +167,7 @@ fun TabIcons(icon: ImageBitmap, isTintColor: Boolean) {
         Image(
             modifier = Modifier.wrapContentSize(),
             bitmap = icon,
+            colorFilter = ColorFilter.tint(ghost_gray),
             contentScale = ContentScale.Fit,
             contentDescription = "tb_icon_else"
         )

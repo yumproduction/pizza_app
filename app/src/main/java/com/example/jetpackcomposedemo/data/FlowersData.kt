@@ -6,19 +6,19 @@ object FlowersData{
     val list = listOf(
         Flowers(name = "Margaritta",
             price = "$570.00",
-            image = R.drawable.ic_red_rose_bouquet
+            image = R.drawable.margaritta
         ),
-        Flowers(name = "Go'sth",
+        Flowers(name = "Go'sht",
             price = "$650.00",
-            image = R.drawable.ic_pink_rose_bouquet
+            image = R.drawable.gosht
         ),
         Flowers(name = "BBQ",
             price = "$570.00",
-            image = R.drawable.ic_red_rose_bouquet
+            image = R.drawable.bbq
         ),
         Flowers(name = "Ranch",
             price = "$650.00",
-            image = R.drawable.ic_pink_rose_bouquet
+            image = R.drawable.ranch
         )
     )
 }
