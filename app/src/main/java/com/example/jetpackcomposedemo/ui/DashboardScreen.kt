@@ -47,6 +47,7 @@ fun DashboardScreen() {
                                     HomeScreen()
                                 }
                                 1 -> {
+                                    AddressScreen()
                                 }
                                 2 -> {
                                 }

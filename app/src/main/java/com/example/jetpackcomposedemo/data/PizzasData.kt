@@ -2,21 +2,21 @@ package com.example.jetpackcomposedemo.data
 
 import com.example.jetpackcomposedemo.R
 
-object FlowersData{
+object PizzasData{
     val list = listOf(
-        Flowers(name = "Margaritta",
+        Pizza(name = "Margaritta",
             price = "$570.00",
             image = R.drawable.margaritta
         ),
-        Flowers(name = "Go'sht",
+        Pizza(name = "Go'sht",
             price = "$650.00",
             image = R.drawable.gosht
         ),
-        Flowers(name = "BBQ",
+        Pizza(name = "BBQ",
             price = "$570.00",
             image = R.drawable.bbq
         ),
-        Flowers(name = "Ranch",
+        Pizza(name = "Ranch",
             price = "$650.00",
             image = R.drawable.ranch
         )

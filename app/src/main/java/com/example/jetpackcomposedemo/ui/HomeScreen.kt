@@ -26,8 +26,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.jetpackcomposedemo.R
-import com.example.jetpackcomposedemo.data.Flowers
-import com.example.jetpackcomposedemo.data.FlowersData
+import com.example.jetpackcomposedemo.data.Pizza
+import com.example.jetpackcomposedemo.data.PizzasData
 import com.google.accompanist.pager.ExperimentalPagerApi
 import com.google.accompanist.pager.HorizontalPager
 import com.google.accompanist.pager.HorizontalPagerIndicator
@@ -129,63 +129,20 @@ private fun SlidingBanner() {
     )
 }
 
-@Composable
-private fun CategoryView() {
-    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.padding(20.dp)) {
-        RoundedCornerIconButton(
-            modifier = Modifier.weight(1f),
-            R.drawable.ic_chinese_plum_flower
-        )
-        Spacer(modifier = Modifier.size(10.dp))
-        RoundedCornerIconButton(
-            modifier = Modifier.weight(1f),
-            R.drawable.ic_flat_flower
-        )
-        Spacer(modifier = Modifier.size(10.dp))
-        RoundedCornerIconButton(
-            modifier = Modifier.weight(1f),
-            R.drawable.ic_giftbox
-        )
-        Spacer(modifier = Modifier.size(10.dp))
-        RoundedCornerIconButton(
-            modifier = Modifier.weight(1f),
-            R.drawable.ic_wedding_arch
-        )
-    }
-}
-
-@Composable
-fun RoundedCornerIconButton(modifier: Modifier, icon: Int) {
-    Box(
-        modifier = modifier
-            .background(color = Color.White, shape = RoundedCornerShape(10.dp))
-    ) {
-        IconButton(
-            onClick = { }, modifier = Modifier
-                .align(Alignment.Center)
-                .padding(14.dp)
-        ) {
-            Image(
-                bitmap = ImageBitmap.imageResource(id = icon),
-                contentDescription = "rounded_corner_icon_button"
-            )
-        }
-    }
-}
 
 @Composable
 private fun PopularFlowersList() {
     LazyRow(
         modifier = Modifier.fillMaxWidth()
     ) {
-        items(FlowersData.list.size) {
-            FlowerCard(FlowersData.list[it])
+        items(PizzasData.list.size) {
+            FlowerCard(PizzasData.list[it])
         }
     }
 }
 
 @Composable
-private fun FlowerCard(flower: Flowers) {
+private fun FlowerCard(flower: Pizza) {
     Card(
         shape = RoundedCornerShape(14.dp),
         backgroundColor = Color.White,
